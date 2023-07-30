@@ -17,6 +17,10 @@ export default function createHomePage() {
     linkContainer.appendChild(contactLink);
 }
 
+function destroyElement() {
+    document.querySelector('.title-overlay').remove();
+}
+
 const createLink = text => {
     const a = document.createElement('button');
     a.innerText = text;
