@@ -1,4 +1,4 @@
-import createMenu from "./menu";
+import { createLink, openNewTab, } from "./element-creator";
 
 function createHomePage() {
     const titleOverlay = document.createElement('div');
@@ -17,24 +17,12 @@ function createHomePage() {
     createLink(linkContainer, 'Contact', 'link', 'contact');
 
     document.querySelector('[data-button-type="menu"]').addEventListener('click', () => {
-        destroyHomePage();
-        createMenu();
+        openNewTab('.title-overlay', 'menu');
     })
     
+    document.querySelector('[data-button-type="contact"]').addEventListener('click', () => {
+        openNewTab('.title-overlay', 'contact');
+    })
 }
 
-function destroyHomePage() {
-    document.querySelector('.title-overlay').remove();
-}
-
-
-const createLink = (parent, text, className, dataAttribute) => {
-    const a = document.createElement('button');
-    a.innerText = text;
-    a.classList.add(className);
-    parent.appendChild(a);
-    a.dataset.buttonType = dataAttribute;
-    return a;
-}
-
-export { createHomePage, createLink };
+export { createHomePage };
