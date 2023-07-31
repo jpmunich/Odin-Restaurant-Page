@@ -62,3 +62,10 @@ h1 {
 .menu-title {
     padding: 0.5em 1em 0.3em 1em;
 }
+
+.contact-page-container {
+    height: 400px;
+    width: 400px;
+    margin: 80px auto 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+}
