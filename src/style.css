@@ -12,10 +12,6 @@ body {
     background: #333333;
 }
 
-img {
-    height: 600px;
-}
-
 #content {
     background-image: url('./background-img.jpg');
     height: 100vh;
@@ -56,4 +52,13 @@ h1 {
 
 .link:hover {
     transform: translateY(-8%);
+}
+
+.menu-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5em;
+}
+
+.menu-title {
+    padding: 0.5em 1em 0.3em 1em;
 }
