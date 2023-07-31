@@ -1,29 +1,40 @@
-export default function createHomePage() {
+import createMenu from "./menu";
+
+function createHomePage() {
     const titleOverlay = document.createElement('div');
     const title = document.createElement('h1');
     const linkContainer = document.createElement('div');
-    const homeLink = createLink('Home');
-    const menuLink = createLink('Menu');
-    const contactLink = createLink('Contact');
 
     linkContainer.classList.add('link-container');
     titleOverlay.classList.add('title-overlay');
     title.innerText = 'Greeks Gyros and More!';
+
     document.getElementById('content').appendChild(titleOverlay);
     titleOverlay.appendChild(title);
     titleOverlay.appendChild(linkContainer);
-    linkContainer.appendChild(homeLink);
-    linkContainer.appendChild(menuLink);
-    linkContainer.appendChild(contactLink);
+    createLink(linkContainer, 'Home', 'link', 'home');
+    createLink(linkContainer, 'Menu', 'link', 'menu');
+    createLink(linkContainer, 'Contact', 'link', 'contact');
+
+    document.querySelector('[data-button-type="menu"]').addEventListener('click', () => {
+        destroyHomePage();
+        createMenu();
+    })
+    
 }
 
-function destroyElement() {
+function destroyHomePage() {
     document.querySelector('.title-overlay').remove();
 }
 
-const createLink = text => {
+
+const createLink = (parent, text, className, dataAttribute) => {
     const a = document.createElement('button');
     a.innerText = text;
-    a.classList.add('link');
+    a.classList.add(className);
+    parent.appendChild(a);
+    a.dataset.buttonType = dataAttribute;
     return a;
 }
+
+export { createHomePage, createLink };
