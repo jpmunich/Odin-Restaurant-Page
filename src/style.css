@@ -67,5 +67,22 @@ h1 {
     height: 400px;
     width: 400px;
     margin: 80px auto 0 auto;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.contact-page-container > p {
+    padding: 0.05em 0 0.05em 0.8em;
+}
+
+h3 {
+    padding: 1.8em 0 0.2em 1.8em;
+}
+
+.employment-page-container > p {
+    padding: 0.05em 0 0.05em 0.8em;
+}
+
+h2 {
+    text-align: center;
+    padding: 0.5em;
 }
