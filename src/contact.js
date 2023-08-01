@@ -11,19 +11,10 @@ function createContactPage() {
     contactHeading.innerText = 'Contact Us!';
     contactPageContainer.appendChild(contactHeading);
 
-    const phoneNumber = document.createElement('p');
-    phoneNumber.innerText = 'Phone: 555-555-5555';
-    const email = document.createElement('p');
-    email.innerText = 'greeksgyros@gmail.com';
-    const address = document.createElement('p');
-    address.innerText = '543 W St';
-    const location = document.createElement('p');
-    location.innerText = 'Mykonos, Greece, 84600';
-
-     contactPageContainer.appendChild(phoneNumber);
-     contactPageContainer.appendChild(email);
-     contactPageContainer.appendChild(address);
-     contactPageContainer.appendChild(location);
+    createText('Phone: 555-555-5555', contactPageContainer);
+    createText('greeksgyros@gmail.com', contactPageContainer);
+    createText('543 W St', contactPageContainer);
+    createText('Mykonos, Greece, 84600', contactPageContainer);
 
      const employmentPage = createEmploymentPage();
      contactPageContainer.appendChild(employmentPage);
@@ -37,24 +28,25 @@ function createContactPage() {
     })
 }
 
+function createText(text, parent) {
+    const element = document.createElement('p');
+    element.innerText = text;
+    parent.appendChild(element);
+}
+
 function createEmploymentPage() {
     const employmentPageContainer = document.createElement('div');
     employmentPageContainer.classList.add('employment-page-container');
 
     const employmentHeading = document.createElement('h3');
-    const employmentPhoneNumber = document.createElement('p');
-    const employmentEmail = document.createElement('p');
-
     employmentHeading.innerText = 'Now Hiring!';
-    employmentPhoneNumber.innerText = 'Employment Phone Number: 555-555-5554';
-    employmentEmail.innerText = 'greeksgyrosjobs@gmail.com';
-
     employmentPageContainer.appendChild(employmentHeading);
-    employmentPageContainer.appendChild(employmentPhoneNumber);
-    employmentPageContainer.appendChild(employmentEmail);
+
+    createText('Now Hiring!', employmentPageContainer);
+    createText('Employment Phone Number: 555-555-5554', employmentPageContainer);
+    createText('greeksgyrosjobs@gmail.com', employmentPageContainer);
 
     return employmentPageContainer;
-
 }
 
 export { createContactPage };
