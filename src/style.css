@@ -23,29 +23,31 @@ body {
 h1 {
     font-size: clamp(1.5rem, 6vw, 3.5rem);
     text-align: center;
-    padding: 1em 1em 0.4em 1em;
+    padding: 1em 1.5em 0.4em 1.5em;
 }
 
 .title-overlay {
     position: absolute;
+    width: 70%;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     padding: 0.5em;
     background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
 }
 
 .link-container {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .link {
     background: transparent;
     border: none;
     border-bottom: 2.5px solid white;
-    font-size: clamp(0.7rem, 1.5vw, 1.4rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.4rem);
     padding: 0.5em;
     flex: 1 1 0;
 }
@@ -64,25 +66,30 @@ h1 {
 }
 
 .contact-page-container {
-    height: 400px;
-    width: 400px;
+    width: clamp(280px, 50%, 600px);
     margin: 80px auto 0 auto;
     background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 1em 2em 2em 0;
 }
 
 .contact-page-container > p {
-    padding: 0.05em 0 0.05em 0.8em;
+    font-size: clamp(0.8rem, 2.7vw, 1.4rem);
+    padding: 0.05em 0 0.05em 1.6em;
 }
 
 h3 {
+    font-size: clamp(1.2rem, 3.2vw, 1.6rem);
     padding: 1.8em 0 0.2em 1.8em;
 }
 
 .employment-page-container > p {
-    padding: 0.05em 0 0.05em 0.8em;
+    font-size: clamp(0.8rem, 2.7vw, 1.4rem);
+    padding: 0.05em 0 0.05em 1.6em;
 }
 
 h2 {
+    font-size: clamp(1.3rem, 3.4vw, 1.9rem);
     text-align: center;
     padding: 0.5em;
 }
