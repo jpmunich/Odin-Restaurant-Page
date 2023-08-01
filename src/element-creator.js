@@ -47,4 +47,10 @@ function openNewTab(tabToDelete, tabToOpen) {
     openPage(tabToOpen);
 }
 
-export { createLink, destroyPage, openPage, openNewTab };
+function createTextElement(type, text, parent) {
+    const element = document.createElement(type);
+    element.innerText = text;
+    parent.appendChild(element);
+}
+
+export { createLink, destroyPage, openPage, openNewTab, createTextElement };
