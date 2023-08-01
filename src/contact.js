@@ -42,7 +42,6 @@ function createEmploymentPage() {
     employmentHeading.innerText = 'Now Hiring!';
     employmentPageContainer.appendChild(employmentHeading);
 
-    createText('Now Hiring!', employmentPageContainer);
     createText('Employment Phone Number: 555-555-5554', employmentPageContainer);
     createText('greeksgyrosjobs@gmail.com', employmentPageContainer);
 
