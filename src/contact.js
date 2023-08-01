@@ -1,24 +1,18 @@
-import { openNewTab } from "./element-creator";
+import { openNewTab, createTextElement } from "./element-creator";
 import contactBackground from './contact-background.jpg';
 
-function createContactPage() {
-    document.getElementById('content').style.backgroundImage = `url(${contactBackground})`;
-    const contactPageContainer = document.createElement('div');
-    contactPageContainer.classList.add('contact-page-container');
-    document.getElementById('content').appendChild(contactPageContainer);
+function createEmploymentPage() {
+    const employmentPageContainer = document.createElement('div');
+    employmentPageContainer.classList.add('employment-page-container');
 
-    const contactHeading = document.createElement('h2');
-    contactHeading.innerText = 'Contact Us!';
-    contactPageContainer.appendChild(contactHeading);
+    createTextElement('h3', 'Now Hiring!', employmentPageContainer)
+    createTextElement('p', 'Employment Phone Number: 555-555-5554', employmentPageContainer);
+    createTextElement('p', 'greeksgyrosjobs@gmail.com', employmentPageContainer);
 
-    createText('Phone: 555-555-5555', contactPageContainer);
-    createText('greeksgyros@gmail.com', contactPageContainer);
-    createText('543 W St', contactPageContainer);
-    createText('Mykonos, Greece, 84600', contactPageContainer);
+    return employmentPageContainer;
+}
 
-     const employmentPage = createEmploymentPage();
-     contactPageContainer.appendChild(employmentPage);
-
+function allowMenuSwitches() {
     document.querySelector('[data-button-type="home"]').addEventListener('click', () => {
         openNewTab('.contact-page-container', 'home');
     })
@@ -28,24 +22,23 @@ function createContactPage() {
     })
 }
 
-function createText(text, parent) {
-    const element = document.createElement('p');
-    element.innerText = text;
-    parent.appendChild(element);
-}
+function createContactPage() {
+    document.getElementById('content').style.backgroundImage = `url(${contactBackground})`;
 
-function createEmploymentPage() {
-    const employmentPageContainer = document.createElement('div');
-    employmentPageContainer.classList.add('employment-page-container');
+    const contactPageContainer = document.createElement('div');
+    contactPageContainer.classList.add('contact-page-container');
+    document.getElementById('content').appendChild(contactPageContainer);
 
-    const employmentHeading = document.createElement('h3');
-    employmentHeading.innerText = 'Now Hiring!';
-    employmentPageContainer.appendChild(employmentHeading);
+    createTextElement('h2', 'Contact Us!', contactPageContainer);
+    createTextElement('p', 'Phone: 555-555-5555', contactPageContainer);
+    createTextElement('p', 'greeksgyros@gmail.com', contactPageContainer);
+    createTextElement('p', '543 W St', contactPageContainer);
+    createTextElement('p', 'Mykonos, Greece, 84600', contactPageContainer);
 
-    createText('Employment Phone Number: 555-555-5554', employmentPageContainer);
-    createText('greeksgyrosjobs@gmail.com', employmentPageContainer);
+     const employmentPage = createEmploymentPage();
+     contactPageContainer.appendChild(employmentPage);
 
-    return employmentPageContainer;
+     allowMenuSwitches();
 }
 
 export { createContactPage };
