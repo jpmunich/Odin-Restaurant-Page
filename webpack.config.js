@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { Template } = require('webpack');
 
 module.exports = {
+  mode: 'production',
     entry: {
         index: './src/index.js',
       },
