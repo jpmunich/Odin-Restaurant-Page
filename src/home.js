@@ -1,7 +1,7 @@
 import { createLink, openNewTab, } from "./element-creator";
 
 function createHomePage() {
-    document.getElementById('content').style.backgroundImage = 'url(./background-img.jpg)';
+    document.getElementById('content').style.backgroundImage = 'url(../dist/images/background-img.jpg)';
 
     const titleOverlay = document.createElement('div');
     const title = document.createElement('h1');

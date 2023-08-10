@@ -1,5 +1,4 @@
 import { openNewTab, createTextElement } from "./element-creator";
-import contactBackground from './contact-background.jpg';
 
 function createEmploymentPage() {
     const employmentPageContainer = document.createElement('div');
@@ -23,7 +22,7 @@ function allowMenuSwitches() {
 }
 
 function createContactPage() {
-    document.getElementById('content').style.backgroundImage = `url(${contactBackground})`;
+    document.getElementById('content').style.backgroundImage = `url(./images/contact-background.jpg)`;
 
     const contactPageContainer = document.createElement('div');
     contactPageContainer.classList.add('contact-page-container');
