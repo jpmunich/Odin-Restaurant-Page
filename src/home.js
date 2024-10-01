@@ -1,10 +1,6 @@
 import { createLink, openNewTab } from "./element-creator";
 
 function createHomePage() {
-  document.getElementById(
-    "content"
-  ).style.backgroundImage = `url(./images/contact-background.jpg)`;
-
   const titleOverlay = document.createElement("div");
   const title = document.createElement("h1");
   const linkContainer = document.createElement("div");
