@@ -183,7 +183,7 @@
   }
   function o() {
     document.getElementById("content").style.backgroundImage =
-      "url(../images/background-img.jpg)";
+      "url(./images/background-img.jpg)";
     const e = document.createElement("div"),
       t = document.createElement("h1"),
       c = document.createElement("div");
