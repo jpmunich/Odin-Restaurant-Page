@@ -10,16 +10,16 @@
 
 body {
   background: #333333;
-}
-
-#content {
   background-image: url("./images/contact-background.jpg");
-  min-height: 100vh;
-  height: 100%;
-  padding-bottom: 2em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#content {
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2em;
 }
 
 h1 {
