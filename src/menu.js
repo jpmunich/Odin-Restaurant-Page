@@ -23,7 +23,7 @@ function createMenuItem(parent) {
 
 function createMenu() {
   document.getElementById("content").style.backgroundImage =
-    "url(./images/background-img.jpg)";
+    "url(./images/contact-background.jpg)";
 
   const menuPageContainer = document.createElement("div");
   menuPageContainer.classList.add("menu-page-container");
